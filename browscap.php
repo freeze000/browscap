@@ -9,9 +9,8 @@
 		
 		$fileData = file_get_contents("http://browscap.org/stream?q=PHP_BrowsCapINI");
 		
-		if ($fileData === false)
-		{
-			exit;
+		if ($fileData === false) {
+			exit("Can not downloaded file browscap.ini");
 		}
 		
 		file_put_contents($browscapIni, $fileData);
